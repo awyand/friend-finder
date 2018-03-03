@@ -7,7 +7,7 @@ Bird-Dog a Battle Buddy is a simple Express.js survey and friend finder applicat
 
 ## Architecture
 
-![Architecture](/app/public/images/architecture.png)
+![Architecture](https://github.com/awyand/friend-finder/blob/master/app/public/assets/images/architecture.png)
 
 ## Packages
 This application uses the following NPM pakages:
