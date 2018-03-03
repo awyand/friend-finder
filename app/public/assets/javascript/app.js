@@ -26,7 +26,7 @@ $(document).ready(function() {
       // Save user input to an object
       var userInput = {
         name: $("#user-name").val().trim(),
-        image: $("#user-image").val().trim(),
+        photo: $("#user-image").val().trim(),
         scores: [
           $("#statement-1").val(),
           $("#statement-2").val(),
