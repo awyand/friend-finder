@@ -4,25 +4,56 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Friend Finder | Home</title>
+    <title>Bird-Dog A Battle Buddy | Home</title>
     <!-- Favicon -->
+    <link rel="icon" href="./images/star.jpg?" type="image/jpg">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Nunito+Sans:300,400,700,900" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/custom.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body>
 
-    <h1>Home Page</h1>
+    <!-- Header -->
+    <div class="container-fluid container-header">
+      <h1 class="header-main-text">BIRD-DOG A BATTLE BUDDY</h1>
+      <p>never go into battle without a buddy</p>
+    </div>
 
-    <a href="/survey"><button type="button" class="btn btn-primary">Survey</button></a>
+    <!-- Description -->
+    <div class="jumbotron jumbotron-description">
+      <div class="container container-definition">
+        <h2 class="no-bottom-margin">"BIRD-DOG"</h2>
+        <p class="no-bottom-margin">/ˈbərd ˈˌdôɡ/</p>
+        <p class="no-bottom-margin"><em>Verb</em></p>
+        <p class="no-bottom-margin">Search out or pursue with dogged determination.</p>
+      </div>
+      <hr>
+      <div class="container container-instructions">
+        <p>Welcome to Bird-Dog a Battle Buddy, your premier resource for finding a friend to share that foxhole with.  Simply click the Survey button below and respond to a brief questionnaire, and our combat companion algorithm will find you a buddy for your next battle.</p>
+        <p class="tagline"><em>"Bird-Dog a Battle Buddy.  Never go into battle without a buddy."</em></p>
+      </div>
+    </div>
 
+    <!-- Buttons -->
+    <div class="container container-buttons">
+      <a href="/survey"><button type="button" class="btn btn-bird-dog"><i class="fas fa-list-ol"></i>&nbsp;&nbsp;Survey</button></a>
+      <a href="/api/friends" target="_blank"><button type="button" class="btn btn-bird-dog"><i class="fas fa-database"></i>&nbsp;&nbsp;Battle Buddy Database (JSON)</button></a>
+      <a href="https://github.com/awyand/friend-finder" target="_blank"><button type="button" class="btn btn-bird-dog"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub Repo</button></a>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="container-fluid container-footer">
+      <p>&copy; Aaron Wyand 2018</p>
+    </div>
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./javascript/app.js"></script>
   </body>
 </html>

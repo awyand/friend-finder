@@ -1,8 +1,129 @@
+/* General */
 html,
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background-color: rgba(158, 154, 117, 0.5);
 }
 
-h1 {
-  font-weight: 700;
+.jumbotron {
+  border-radius: 0;
+  background-color: rgba(96, 68, 57, 0.5);
+  color: rgba(255,255,255,1);
+  margin: 40px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+hr {
+  border-color: white;
+}
+
+/* Header */
+.container-header {
+  background-color: rgba(63, 83, 59, 0.9);
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  color: rgba(255,255,255,1);
+  margin-bottom: 40px;
+}
+
+.header-main-text {
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 50px;
+}
+
+/* Home */
+.container-definition {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.tagline {
+  text-align: right;
+}
+
+.container-buttons {
+  text-align: center;
+}
+
+/* Survey */
+.container-survey-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-submit-btn {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#submit {
+  font-size: 22px;
+}
+
+/* Modal */
+.modal-header {
+  background-color: rgba(63, 83, 59, 0.9);
+  color: rgba(255,255,255,1);
+  border-radius: 0;
+}
+
+.modal-body {
+  text-align: center;
+  background-color: rgba(158, 154, 117, 0.5);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-footer {
+  background-color: rgba(158, 154, 117, 0.5);
+}
+
+.error-text {
+  margin: 10px 0;
+}
+
+.close {
+  color: rgba(255,255,255,0.7);
+}
+
+.close:hover {
+  color: rgba(255,255,255,1);
+}
+
+#result-name {
+  font-weight: bold;
+}
+#result-image {
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn-bird-dog {
+  background-color: rgba(63, 83, 59, 0.9);
+  color: rgba(255,255,255,1);
+  border-radius: 0;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.btn-bird-dog:hover {
+  background-color: rgba(158, 154, 117, 0.5);
+  border: 1px solid rgba(63, 83, 59, 0.9);
+  color: black;
+}
+
+/* Footer */
+.container-footer {
+  height: 160px;
+  margin-top: 40px;
+  background-color: rgba(63, 83, 59, 0.9);
+  text-align: center;
+  padding: 80px 0;
+  color: rgba(255,255,255,1);
 }

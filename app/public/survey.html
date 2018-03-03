@@ -1,28 +1,278 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Friend Finder | Survey</title>
-    <!-- Favicon -->
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/custom.css">
-  </head>
-  <body>
 
-    <h1>Survey Page</h1>
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bird-Dog A Battle Buddy | Home</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/star.jpg?" type="image/jpg">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Nunito+Sans:300,400,700,900" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/custom.css">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
 
-    <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+<body>
+
+  <!-- Result Modal -->
+  <div class="modal fade" id="result-modal" tabindex="-1" role="dialog" aria-labelledby="result-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="result-modal-label">Your Battle Buddy</h5>
+        </div>
+        <div class="modal-body">
+          <h6 id="result-name"></h6>
+          <img id="result-image">
+        </div>
+        <div class="modal-footer">
+          <a href="/survey"><button type="button" class="btn btn-bird-dog"><i class="fas fa-list-ol"></i>&nbsp;&nbsp;Survey</button></a>
+          <a href="/"><button type="button" class="btn btn-bird-dog"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="error-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="error-modal-label">Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close" id="error-close">
+              <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+          <p class="error-text">All fields are required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="container-fluid container-header">
+    <h1 class="header-main-text">BIRD-DOG A BATTLE BUDDY</h1>
+    <p>never go into battle without a buddy</p>
+  </div>
+
+  <!-- Instructions -->
+
+  <!-- User Information -->
+  <div class="jumbotron jumbotron-user-information">
+    <!-- User Information Header -->
+    <h4><strong>Your Information</strong></h4>
+    <!-- User Information Form -->
+    <form>
+      <div class="form-group">
+        <label for="user-name">Your Name</label>
+        <input type="text" class="form-control" id="user-name" aria-describedby="user-name-required">
+        <small id="user-name-required" class="form-text">Required</small>
+      </div>
+      <div class="form-group">
+        <label for="user-image">Link to Your Photo</label>
+        <input type="text" class="form-control" id="user-image" aria-describedby="user-image-required">
+        <small id="user-image-required" class="form-text">Required</small>
+      </div>
+    </form>
+  </div>
+
+  <!-- Survey -->
+  <div class="container">
+    <div class="container container-survey-header">
+      <h4><strong>Survey</strong></h4>
+      <p>Select a number from 1 (strongly disagree) to 5 (strongly agree) for each statement.</p>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">1. Most people would characterize your physical stature as "intimidating".</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-1">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">2. A life in politics would be a good fit following an action-packed career.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-2">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">3. You are a southern guy or gal all the way.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-3">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">4. Cross-functional assignments are appealing to you.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-4">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">5. You are interested in science and technology.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-5">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">6. The Middle East would be an interesting place to visit.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-6">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">7. You'd rather be high in the sky than on land or at sea.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-7">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">8. Hair is for hippies. Bic all the way.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-8">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">9. Your speeches are rousing and oft-quoted.</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-9">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <div class="container survey-statement-section">
+      <h5 class="survey-statement">10. People call you "Mad Dog".</h5>
+      <form>
+        <div class="form-group">
+          <select class="form-control" id="statement-10">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+        </div>
+      </form>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="container container-submit-btn">
+      <button type="button" class="btn btn-bird-dog" id="submit"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Submit</button>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="container container-buttons">
+    <a href="/"><button type="button" class="btn btn-bird-dog"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</button></a>
+    <a href="/api/friends" target="_blank"><button type="button" class="btn btn-bird-dog"><i class="fas fa-database"></i>&nbsp;&nbsp;Battle Buddy Database (JSON)</button></a>
+    <a href="https://github.com/awyand/friend-finder" target="_blank"><button type="button" class="btn btn-bird-dog"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub Repo</button></a>
+  </div>
 
 
+  <!-- Footer -->
+  <div class="container-fluid container-footer">
+    <p>&copy; Aaron Wyand 2018</p>
+  </div>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./javascript/app.js"></script>
+</body>
+
 </html>
